@@ -9,10 +9,10 @@ public class RoundTax {
 		BigDecimal scale=new BigDecimal(0.05);
 		
 		BigDecimal priceWithTax=price.multiply(tax);
-		BigDecimal y=priceWithTax.divide(scale);
+		BigDecimal pass1=priceWithTax.divide(scale);
 		
-		BigDecimal q=y.setScale(0, RoundingMode.UP);
-		BigDecimal result=q.multiply(scale);
+		BigDecimal pass2=pass1.setScale(0, RoundingMode.UP);
+		BigDecimal result=pass2.multiply(scale);
 		
 		return result.setScale(2, RoundingMode.HALF_DOWN);
 				

@@ -29,7 +29,8 @@ public class Basket {
 		
 	}
 
-	public void printReceive() {		
+	public void printReceive() {	
+		
 		for (Product p:salesList){
 			System.out.println("1 "+p.print()+":"+p.getShelfPrice().setScale(2, RoundingMode.CEILING));
 		}
